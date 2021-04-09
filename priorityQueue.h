@@ -9,40 +9,15 @@
 struct PriorityQueue{
     BinaryHeap heap;
 
-    void push(Data data){
-        heap.arr.push_back(&data);
-        heap.siftUp(heap.arr.realSize-1);
-    }
+    void push(Data data);
 
-    Data top(){
-        if (size() > 0){
-            return heap.arr.innerArray[0];
-        }
-        return heap.arr.innerArray[0] = Data(0, 0, 0);
-    }
+    Data top();
 
-    Data pop(){
-        if (size() > 0){
-            Data temp = heap.arr.innerArray[0];
-            heap.arr.innerArray[0] = heap.arr.innerArray[heap.arr.realSize-1];
-            heap.arr.innerArray[heap.arr.realSize-1] = temp;
-            heap.arr.realSize--;
-            heap.siftDown(0);
-            return temp;
-        }
-        return heap.arr.innerArray[0] = Data(0, 0, 0);
-    }
+    Data pop();
 
-    int size(){
-        return heap.arr.realSize;
-    }
+    int size();
 
-    bool empty(){
-        if (size() > 0){
-            return false;
-        }
-        return true;
-    }
+    bool empty();
 };
 
 #endif //LAB2_3_PRIORITYQUEUE_H
