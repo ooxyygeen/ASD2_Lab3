@@ -20,7 +20,7 @@ struct DynamicArray
 
     ~DynamicArray();
 
-    void push_back(Data* aData);
+    void push_back(Data aData);
 
     void push_front(Data* aData);
 

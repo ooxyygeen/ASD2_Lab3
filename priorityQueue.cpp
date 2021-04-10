@@ -4,7 +4,7 @@
 #include "priorityQueue.h"
 
 void PriorityQueue::push(Data data) {
-    heap.arr.push_back(&data);
+    heap.arr.push_back(data);
     heap.siftUp(size()-1);
 }
 

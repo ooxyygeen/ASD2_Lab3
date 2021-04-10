@@ -13,7 +13,7 @@ DynamicArray::~DynamicArray(){
     delete[] innerArray;
 }
 
-void DynamicArray::push_back(Data *aData) {
+void DynamicArray::push_back(Data aData) {
     if (realSize == capacity)
     {
         capacity *= alpha;
@@ -31,7 +31,7 @@ void DynamicArray::push_back(Data *aData) {
     }
 
     //push_back
-    innerArray[realSize] = *aData;
+    innerArray[realSize] = aData;
     realSize++;
 }
 

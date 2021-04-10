@@ -41,12 +41,6 @@ void insertionSort(int* aArray, int aArraySize)
                 aArray[j] = aArray[j+1];
                 aArray[j+1] = temp;
             }
-            if ((aArray[j]) == (key) && aArray[j] > key)
-            {
-                int temp = aArray[j];
-                aArray[j] = aArray[j+1];
-                aArray[j+1] = temp;
-            }
             j = j - 1;
         }
     }
@@ -59,7 +53,7 @@ bool testHeapSort(){
     int arr4[N];    //  for insertionSort
 
     for (int i = 0; i < N; ++i) {
-        arr1[i] = arr2[i] = arr3[i] = arr4[i] = rand()%100;
+        arr1[i] = arr2[i] = arr3[i] = arr4[i] = rand();
     }
 
     clock_t start1 = clock();
